@@ -1,0 +1,18 @@
+<p>composicoes works!</p>
+
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Composição 1 (Split)
+        </mat-panel-title>
+        <mat-panel-description>
+          Para detalhes clique
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <!-- <p>I'm visible because I am open</p> -->
+      <app-tree-flat></app-tree-flat>
+    </mat-expansion-panel>
+</mat-accordion>
+  
