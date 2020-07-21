@@ -121,8 +121,16 @@
               "devServerTarget": "comps:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "comps"
+    }
+  },
+  "defaultProject": "comps",
+  "cli": {
+    "analytics": false
+  }
 }
