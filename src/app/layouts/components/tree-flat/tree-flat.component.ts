@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { comp } from './example-data';
@@ -25,7 +25,6 @@ export interface Champion {
  */
 export interface FlatTreeNode {
   name: string;
-  // type: string;
   level: number;
   expandable: boolean;
 }
@@ -35,8 +34,8 @@ export interface FlatTreeNode {
   templateUrl: './tree-flat.component.html',
   styleUrls: ['./tree-flat.component.scss']
 })
-export class TreeFlatComponent {
-
+export class TreeFlatComponent implements OnInit {
+  @Input() composition: any;
   /** The TreeControl controls the expand/collapse state of tree nodes.  */
   treeControl: FlatTreeControl<FlatTreeNode>;
 
@@ -55,7 +54,14 @@ export class TreeFlatComponent {
 
     this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
     this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-    this.dataSource.data = comp;
+  }
+
+  ngOnInit(): void {
+    this.setDataSource();
+  }
+
+  setDataSource(){
+    this.dataSource.data = this.composition;
   }
 
   /** Transform the data to something the tree can read. */

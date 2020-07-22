@@ -14,10 +14,11 @@
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
     </button>
-    <!-- <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
-      {{ node.type ==='file' ? 'description' : 'folder' }}
-    </mat-icon> -->
-    <img style="max-width: 20px; max-height: 20px;" src="assets/images/top_icon.png" alt="Photo of a Shiba Inu">
+    <img *ngIf="node.name === 'Top'" style="max-width: 30px; max-height: 30px;" src="assets/images/top_icon.png">
+    <img *ngIf="node.name === 'Mid'" style="max-width: 30px; max-height: 30px;" src="assets/images/mid_icon.png">
+    <img *ngIf="node.name === 'Jungler'" style="max-width: 30px; max-height: 30px;" src="assets/images/jungle_icon.png">
+    <img *ngIf="node.name === 'Sup'" style="max-width: 30px; max-height: 30px;" src="assets/images/sup_icon.png">
+    <img *ngIf="node.name === 'Adc'" style="max-width: 30px; max-height: 30px;" src="assets/images/adc_icon.png">
     {{node.name}}
   </mat-tree-node>
 </mat-tree>

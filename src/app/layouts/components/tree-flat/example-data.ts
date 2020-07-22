@@ -2,6 +2,7 @@
 export const comp = [
   {
     name: 'Top',
+    role: 'T',
     champions: [
       { name: 'GNAR' },
       // { name: 'README.md' }
@@ -9,6 +10,7 @@ export const comp = [
   },
   {
     name: 'Mid',
+    role: 'M',
     champions: [
       { name: 'VIKTOR' },
       // { name: 'README.md' }
@@ -16,6 +18,7 @@ export const comp = [
   },
   {
     name: 'Jungler',
+    role: 'J',
     champions: [
       { name: 'ELISE' },
       // { name: 'README.md' }
@@ -23,6 +26,7 @@ export const comp = [
   },
   {
     name: 'Sup',
+    role: 'S',
     champions: [
       { name: 'NAUTILUS' },
       // { name: 'README.md' }
@@ -30,6 +34,7 @@ export const comp = [
   },
   {
     name: 'Adc',
+    role: 'A',
     champions: [
       { name: 'JINX' },
       // { name: 'README.md' }
