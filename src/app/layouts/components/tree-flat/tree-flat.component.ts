@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { files } from './example-data';
+import { comp } from './example-data';
 
 /** File node data with possible child nodes. */
 // export interface FileNode {
@@ -55,7 +55,7 @@ export class TreeFlatComponent {
 
     this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
     this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-    this.dataSource.data = files;
+    this.dataSource.data = comp;
   }
 
   /** Transform the data to something the tree can read. */

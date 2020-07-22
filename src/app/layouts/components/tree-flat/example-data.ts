@@ -1,5 +1,5 @@
 /** Example file/folder data. */
-export const files = [
+export const comp = [
   {
     name: 'Top',
     champions: [

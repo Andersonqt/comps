@@ -14,9 +14,10 @@
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
     </button>
-    <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
+    <!-- <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
       {{ node.type ==='file' ? 'description' : 'folder' }}
-    </mat-icon>
+    </mat-icon> -->
+    <img style="max-width: 20px; max-height: 20px;" src="../../../../assets/images/top_icon.png" alt="Photo of a Shiba Inu">
     {{node.name}}
   </mat-tree-node>
 </mat-tree>
