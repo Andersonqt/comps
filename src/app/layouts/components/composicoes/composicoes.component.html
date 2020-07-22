@@ -17,18 +17,107 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <mat-accordion *ngFor="let item of composicoes">
+      
+      <mat-accordion>
         <mat-expansion-panel (opened)="panelOpenState = true"
                             (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{item.name}}
+              SPLIT PUSH
             </mat-panel-title>
-            <mat-panel-description>
-              {{item.type}}
-            </mat-panel-description>
+            <!-- <mat-panel-description> -->
+              <!-- {{item.type}} -->
+            <!-- </mat-panel-description> -->
           </mat-expansion-panel-header>
-          <app-tree-flat [composition]='item.comp'></app-tree-flat>
+          <mat-accordion *ngFor="let item of composicoesSplit">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-tree-flat [composition]='item.comp'></app-tree-flat>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+      
+      <!-- PROTECT -->
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              PROTECT
+            </mat-panel-title>
+            <!-- <mat-panel-description> -->
+              <!-- {{item.type}} -->
+            <!-- </mat-panel-description> -->
+          </mat-expansion-panel-header>
+          <mat-accordion *ngFor="let item of compProtect">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-tree-flat [composition]='item.comp'></app-tree-flat>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <!-- TEAM FIGHT -->
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              TEAM FIGHT
+            </mat-panel-title>
+            <!-- <mat-panel-description> -->
+              <!-- {{item.type}} -->
+            <!-- </mat-panel-description> -->
+          </mat-expansion-panel-header>
+          <mat-accordion *ngFor="let item of compTeamFight">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-tree-flat [composition]='item.comp'></app-tree-flat>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <!-- POKE -->
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              POKE
+            </mat-panel-title>
+            <!-- <mat-panel-description> -->
+              <!-- {{item.type}} -->
+            <!-- </mat-panel-description> -->
+          </mat-expansion-panel-header>
+          <mat-accordion *ngFor="let item of compPoke">
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <app-tree-flat [composition]='item.comp'></app-tree-flat>
+            </mat-expansion-panel>
+          </mat-accordion>
         </mat-expansion-panel>
       </mat-accordion>
     </div>

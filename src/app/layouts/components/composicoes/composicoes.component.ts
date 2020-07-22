@@ -9,7 +9,270 @@ export class ComposicoesComponent implements OnInit {
 
   panelOpenState = false;
   constructor() { }
-  composicoes = 
+  compTeamFight = [];
+  compPoke = [
+    {
+      name: 'Composição 1',
+      type: 'Poke',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Gnar' },
+            { name: 'Urgot' },
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Lee Sin' },
+            { name: 'Gragas' },
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Corki' },
+            { name: 'Ziggs' },
+            { name: 'Lux' }
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Karma' },
+            { name: 'Braum' },
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Ezreal' },
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Composição 2',
+      type: 'Poke',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Jayce' },
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Nidalee' },
+            { name: 'Lee Sin' }
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Lux' },
+            { name: 'Zoe' },
+            { name: 'Xerath' },
+            { name: 'Vel\'Koz' },
+            { name: 'Ziggs' },
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Sona' },
+            { name: 'Karma' }
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Ezreal' },
+            { name: 'Caitlyn' },
+            { name: 'Kog\'Maw' },
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Composição 3',
+      type: 'Poke',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Rumble' },
+            { name: 'Gnar' },
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Jarvan IV' },
+            { name: 'Nidalee' },
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Zoe' },
+            { name: 'Corki' },
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Thresh' },
+            { name: 'Yuumi' },
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Ezreal' },
+            { name: 'Varus' },
+          ]
+        }
+      ]
+    },
+  ];
+  compProtect = [
+    {
+      name: 'Composição 1',
+      type: 'Protect',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Ornn' }
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Lee Sin' }
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Zilean' },
+            { name: 'Lux' }
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Lulu' },
+            { name: 'Nami' },
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Jinx' },
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Composição 2',
+      type: 'Protect',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Malphite' },
+            { name: 'Shen' },
+            { name: 'Ornn' },
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Sejuani' },
+            { name: 'Lee Sin' }
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Karma' },
+            { name: 'Orianna' },
+            { name: 'Lux' }
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Janna' },
+            { name: 'Lulu' }
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Kog\'Maw' },
+            { name: 'Vayne' },
+            { name: 'Jinx' },
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Composição 3',
+      type: 'Protect',
+      comp: [
+        {
+          name: 'Top',
+          champions: [
+            { name: 'Cho\'Gath' },
+            { name: 'Ornn' },
+            { name: 'Maokai' },
+          ]
+        },
+        {
+          name: 'Jungler',
+          champions: [
+            { name: 'Lee Sin' },
+            { name: 'Ivern' },
+            { name: 'Sejuani' },
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Karma' },
+            { name: 'Lux' },
+            { name: 'Orianna' },
+            { name: 'Galio' },
+          ]
+        },
+        {
+          name: 'Sup',
+          champions: [
+            { name: 'Lulu' },
+            { name: 'Janna' },
+            { name: 'Sona' },
+            { name: 'Braum' },
+            { name: 'Naulitus' },
+          ]
+        },
+        {
+          name: 'Adc',
+          champions: [
+            { name: 'Aphelios' },
+            { name: 'Jinx' },
+            { name: 'Xayah' },
+            { name: 'Draven' },
+          ]
+        }
+      ]
+    },
+  ];
+  composicoesSplit = 
   [
     {
       name: 'Composição 1',
@@ -17,42 +280,37 @@ export class ComposicoesComponent implements OnInit {
       comp: [
         {
           name: 'Top',
-          role: 'T',
           champions: [
-            { name: 'GNAR' },
-            // { name: 'README.md' }
-          ]
-        },
-        {
-          name: 'Mid',
-          role: 'M',
-          champions: [
-            { name: 'VIKTOR' },
-            // { name: 'README.md' }
+            { name: 'Gnar' },
+            { name: 'Jax' },
+            { name: 'Urgot' },
           ]
         },
         {
           name: 'Jungler',
-          role: 'J',
           champions: [
-            { name: 'ELISE' },
-            // { name: 'README.md' }
+            { name: 'Elise' },
+            { name: 'Graves' }
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Ziggs' },
+            { name: 'Malzahar' },
+            { name: 'Orianna' },
           ]
         },
         {
           name: 'Sup',
-          role: 'S',
           champions: [
-            { name: 'NAUTILUS' },
-            // { name: 'README.md' }
+            { name: 'Braum' },
           ]
         },
         {
           name: 'Adc',
-          role: 'A',
           champions: [
-            { name: 'JINX' },
-            // { name: 'README.md' }
+            { name: 'Lucian' },
           ]
         }
       ]
@@ -63,42 +321,40 @@ export class ComposicoesComponent implements OnInit {
       comp: [
         {
           name: 'Top',
-          role: 'T',
           champions: [
-            { name: 'GNAR' },
-            // { name: 'README.md' }
-          ]
-        },
-        {
-          name: 'Mid',
-          role: 'M',
-          champions: [
-            { name: 'VIKTOR' },
-            // { name: 'README.md' }
+            { name: 'Camille' },
+            { name: 'Darius' },
+            { name: 'Urgot' },
           ]
         },
         {
           name: 'Jungler',
-          role: 'J',
           champions: [
-            { name: 'ELISE' },
-            // { name: 'README.md' }
+            { name: 'Sejuani' },
+            { name: 'Elise' }
+          ]
+        },
+        {
+          name: 'Mid',
+          champions: [
+            { name: 'Ekko' },
+            { name: 'Orianna' }
           ]
         },
         {
           name: 'Sup',
-          role: 'S',
           champions: [
-            { name: 'NAUTILUS' },
-            // { name: 'README.md' }
+            { name: 'Rakan' },
+            { name: 'Nami' },
+            { name: 'Bardo' },
+            { name: 'Zyra' },
           ]
         },
         {
           name: 'Adc',
-          role: 'A',
           champions: [
-            { name: 'JINX' },
-            // { name: 'README.md' }
+            { name: 'Xayah' },
+            { name: 'Ezreal' }
           ]
         }
       ]
